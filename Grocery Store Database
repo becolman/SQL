@@ -1,0 +1,23 @@
+--Create a grocery store database
+CREATE TABLE houseofrookies (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, colour TEXT, finish TEXT);
+
+INSERT INTO houseofrookies VALUES (1, "moisturizer", 20, "white", "glossy");
+INSERT INTO houseofrookies VALUES (2, "foundation", 35, "multiples", "matte");
+INSERT INTO houseofrookies VALUES (3, "concealer", 22, "multiples", "matte");
+INSERT INTO houseofrookies VALUES (4, "powder", 19, "translucid", "matte");
+INSERT INTO houseofrookies VALUES (5, "eyebrow_pomade", 25, "brown", "matte");
+INSERT INTO houseofrookies VALUES (6, "eye_primer", 15, "white", "glossy");
+INSERT INTO houseofrookies VALUES (7, "eyeshadow", 16, "soft_brown", "matte");
+INSERT INTO houseofrookies VALUES (8, "eyeliner", 20, "black", "waterproof");
+INSERT INTO houseofrookies VALUES (9, "mascara", 25, "black", "waterproof");
+INSERT INTO houseofrookies VALUES (10, "countur_stick", 19, "cold_brown", "creamy");
+INSERT INTO houseofrookies VALUES (11, "blush", 16, "pink", "glossy");
+INSERT INTO houseofrookies VALUES (12, "highlighter", 19, "pearl", "glossy");
+INSERT INTO houseofrookies VALUES (13, "setting_spray", 16, "transparent", "wet"); INSERT INTO houseofrookies VALUES (14, "brushes", 100, "black", "wood");
+INSERT INTO houseofrookies VALUES (15, "stencils", 25, "white", "paper");
+
+--display the database ordered by price.
+SELECT * FROM houseofrookies ORDER BY price;
+
+--display the total price of the product finish group by finish
+SELECT finish, SUM(price) FROM houseofrookies GROUP BY finish;
